@@ -1,10 +1,18 @@
 package com.group.libraryapp.dto.homework;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import net.bytebuddy.asm.Advice;
 
 import java.time.LocalDate;
 
 public class FruitInformation {
+
+    private String name;
+    private LocalDate warehousingDate;
+    private long price;
+    private boolean sales;
+    @JsonIgnore
+    private Long id;
 
     public String getName() {
         return name;
@@ -33,10 +41,17 @@ public class FruitInformation {
         this.sales = sales;
     }
 
-    private String name;
-    private LocalDate warehousingDate;
-    private long price;
-    private boolean sales;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public boolean getSales(){
         return sales;
