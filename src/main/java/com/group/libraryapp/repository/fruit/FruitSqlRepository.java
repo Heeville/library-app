@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+@Primary
 @Repository
 public class FruitSqlRepository implements FruitRepository{
 

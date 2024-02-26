@@ -15,7 +15,7 @@ class FruitIdGenerator {
         return id++;
     }
 }
-@Primary
+
 @Repository
 public class FruitMemoryRepository implements FruitRepository{
 
